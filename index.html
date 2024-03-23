@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vero Galbicka">
+    <title>Formulario</title>
+    <!-- pequeño estilo antes de css -->
+    <style>
+        fieldset{background: rgb(175, 193, 249); border: 3px solid rgb(20, 73, 233);}
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        legend{
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <h1>Ingrese sus datos</h1>
+
+        <fieldset>
+            <legend>Tu imagen de perfil</legend>
+            <label for="avatar">Tu imagen</label> <input type="file" id="avatar" name="avatar" required><br>
+            <!-- <label for="preview">Vista previa</label> <img id="preview" width="10%" alt="foto de perfil"> -->
+        </fieldset><br>
+
+        <fieldset>
+
+            <legend>Información personal</legend><br>
+            <label for="fullname">Nombre:</label> <input type="text" id="fullname" name="fullname" placeholder="Ingresa tu nombre completo" required> <br>
+            <label for="gender">Genero:</label> <input type="radio" id="gender" name="gender" class="cbr" value="Male" required>varón <input type="radio" name="gender" class="cbr" value="Female">mujer <br>
+            <label for="age">Edad:</label> <input id="age" type="number" min="0" max="99" step="1" value="18" name="age" required> <br>
+            <label for="birthday">Fecha de nacimiento:</label> <input type="date" id="birthday" name="birthday" required> <br>
+            <label for="color">Color favorito:</label> <input type="color" id="color" name="color" required> <br>
+            <label for="country">Seleccioná tu país:</label> <select id="country" name="country" required> <option value="NS"></option> 
+            <option value="AR">Argentina</option> <option value="BR">Brasil</option> <option value="BO">Bolivia</option> 
+            <option value="COL">Colombia</option> <option value="MX">Mexico</option> </select>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Información para el uniforme</legend><br>
+
+            <label for="estatura">Estatura en cm:</label> <label class="izq"> baja </label> <input type="range" min="0" max="250" step="5" value="50" id="altura" name="altura"> <label class="derecha"> alta </label> <br>
+
+            <label for="talletop">Talle de camisa: </label> <input type="text" id="talletop" name="talletop" placeholder="Ingresa tu talle de camisa" required> <br>
+            <label for="tallepantalon">Talle de pantalón: </label> <input type="text" id="tallepantalon" name="tallepantalon" placeholder="Ingresa tu talle de pantalón" required> <br>
+            <label for="tallecalzado">Número de calzado: </label> <input type="text" id="tallecalzado" name="tallecalzado" placeholder="Ingresa tu número de calzado" required> <br>
+
+        </fieldset><br>
+
+
+        <fieldset>
+            <legend>Información de contacto</legend>
+
+            <label for="email">Correo electrónico</label> <input type="email" id="email" name="email" required> <br>
+
+
+            <label for="tel">Teléfono: </label> <input type="tel" id="tel" name="tel" required> <br>
+            <label for="adress">Domicilio: </label> <textarea rows="2" cols="60" id="adress" name="adress" required> </textarea> <br>
+            <label for="method">Metodo de contacto: </label> <input type="checkbox" id="method" name="method" class="cbr" value="Email"> Email <input type="checkbox" id="method" name="method" class="cbr" value="Whatsapp"> Whatsapp <input type="checkbox" id="method" name="method" class="cbr" value="In-app chat"> Celular
+
+        </fieldset>
+    </form>
+</body>
+</html>
